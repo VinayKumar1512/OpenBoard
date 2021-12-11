@@ -7,7 +7,7 @@ const app = express();//initialized the app -> app is nothing consider it as a s
 app.use(express.static("public"));
 
 //server is listing to the request made to the port 5000
-let port=5000;
+let port=process.env.PORT || 5000;
 let server = app.listen(port,function(){
  console.log("Server Running at Port 5000");
 })
