@@ -1,0 +1,166 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.options_container {
+  height: 4rem;
+  width: 4rem;
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  background-color: #ecf0f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  padding: 0.5rem;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.tools_container {
+  height: 4rem;
+  width: 50vw;
+  display: flex;
+  justify-content: space-around;
+  background-color: #ecf0f1;
+  position: absolute;
+  top: 2rem;
+  left: 25vw;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.tools_container > * {
+  display: block;
+  width: 4rem;
+}
+
+.scale-tools {
+  animation-name: scale-tools;
+  animation-duration: 1s;
+}
+
+@keyframes scale-tools {
+  0% {
+    transform: scale(0.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pencil-tool-cont {
+  background-color: #ecf0f1;
+  height: 4rem;
+  width: 6rem;
+  position: absolute;
+  top: 6rem;
+  left: 25vw;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: none;
+  /* none because intially pencil and eraser container are not showed,it will show only when we click
+    on pencil or eraser */
+}
+
+.pencil-width-cont {
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pencil-width-cont input {
+  width: 75%;
+}
+
+.pencil-color-cont {
+  height: calc(100% - 2rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.pencil-color {
+  width: 1.3rem;
+  height: 1.5rem;
+  border-radius: 50%;
+}
+.black {
+  background-color: black;
+}
+.red {
+  background-color: red;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.eraser-tool-cont {
+  height: 2rem;
+  width: 6rem;
+  background-color: #ecf0f1;
+  position: absolute;
+  top: 6rem;
+  left: 32.2vw;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.eraser-tool-cont input {
+  width: 75%;
+}
+
+.sticky-cont {
+  height: 13rem;
+  width: 13rem;
+  position: absolute;
+  top: 15rem;
+  left: 10rem;
+}
+
+.header-cont {
+  height: 1.8rem;
+  background-color: azure;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.header-cont > * {
+  height: 1.3rem;
+  width: 1.3rem;
+  margin-right: 0.5rem;
+  border-radius: 50%;
+}
+
+.minimize {
+  background-color: #2ed573;
+}
+
+.remove {
+  background-color: #ff4757;
+}
+.note-cont {
+  height: calc(100% - 1.8rem);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+textarea{
+    height: 100%;
+    width: 100%;
+    border: none;
+    resize: none;
+    outline: none;
+}
+
+.note-cont img{
+    height: 100%;
+    width: 100%;
+}

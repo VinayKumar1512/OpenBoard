@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- font awesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>OpenBoard.com</title>
+  </head>
+  <body>
+    <!-- options container i.e bars -->
+    <div class="options_container">
+      <i class="fas fa-bars"></i>
+    </div>
+    <!-- tools container-> having all tools of the board -->
+    <div class="tools_container scale-tools">
+      <img class="pencil" src="images/icons8-pencil-64.png" alt="" />
+      <img class="eraser" src="images/icons8-eraser-64.png" alt="" />
+      <img class="download" src="images/icons8-download-64.png" alt="" />
+      <img class="upload" src="images/icons8-upload-64.png" alt="" />
+      <img class="sticky-notes" src="images/icons8-notes-64.png" alt="" />
+      <img class="undo" src="images/icons8-undo-48.png" alt="" />
+      <img class="redo" src="images/icons8-redo-48.png" alt="" />
+    </div>
+    
+    <!-- pencil tool container-> include pencil-width and pencil colors -->
+    <div class="pencil-tool-cont">
+      <div class="pencil-width-cont">
+        <input type="range" min="2" max="10" value="3" class="pencil-width" />
+      </div>
+      <div class="pencil-color-cont">
+        <div class="black pencil-color"></div>
+        <div class="red pencil-color"></div>
+        <div class="blue pencil-color"></div>
+      </div>
+    </div>
+    <!-- eraser tool container-> include eraser width -->
+    <div class="eraser-tool-cont">
+      <input type="range" min="5" max="30" value="3" class="eraser-width" />
+    </div>
+
+    <!-- canvas element in order to perform graphics -->
+    <canvas></canvas>
+     <!-- /*socket.io cdn link*/ -->
+    <script
+      src="https://cdn.socket.io/4.4.0/socket.io.min.js"
+      integrity="sha384-1fOn6VtTq3PWwfsOrk45LnYcGosJwzMHv+Xh/Jx5303FVOXzEnw0EpLv30mtjmlj"
+      crossorigin="anonymous"
+    ></script>
+    <!--connecting socket.io to our computer server -->
+    <script>
+     let socket= io.connect("http://localhost:5000");
+    </script>
+    <script src="tools.js"></script>
+    <script src="canvas.js"></script>
+  </body>
+</html>
